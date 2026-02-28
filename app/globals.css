@@ -22,3 +22,35 @@ body {
   background-color: var(--ws-void);
   color: var(--ws-ink);
 }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: rgba(124, 106, 247, 0.3);
+  color: var(--ws-ink);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--ws-void); }
+::-webkit-scrollbar-thumb { background: var(--ws-border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ws-signal); }
+
+/* Pulse animation for status dots */
+@keyframes ws-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+.animate-pulse { animation: ws-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
