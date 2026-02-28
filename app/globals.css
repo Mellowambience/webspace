@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ws-void: #0A0A0F;
+  --ws-ink: #E8E8F0;
+  --ws-signal: #7C6AF7;
+  --ws-glow: #A89CF8;
+  --ws-mist: #1C1C2E;
+  --ws-border: #2A2A3D;
+  --ws-warm: #F2A65A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--ws-void);
+  color: var(--ws-ink);
+}
